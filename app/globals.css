@@ -1,0 +1,494 @@
+:root {
+    --accent: #a17db7;
+    --error: #e74d3c;
+    --border-r: 5px;
+
+    --highlight-bg: #34323988;
+
+    --container-bg: #1d1c23;
+    --input-bg: #141418;
+
+    --btn-bg: #2e2d35;
+    --btn-hover-bg: #614b6d;
+    --btn-disabled-bg: var(--input-bg);
+}
+
+body, html {
+    background-color: #000;
+    min-height: calc(100vh - 4rem);
+    left: 0;
+    right: 0;
+    line-height: 2;
+}
+
+body {
+    background: #111;
+    background: linear-gradient(0, #111 0%, #1a0f1c 100%);
+    background-attachment: fixed;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 4rem;;
+    overflow: overlay;
+}
+
+.mainHeader {
+    justify-content: initial;
+    background: rgba(0, 0, 0, 0.233);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+header h3 {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+header h3 svg {
+    color: var(--accent);
+    margin: 0;
+}
+
+h3 svg {
+    color: var(--accent);
+    margin-right: 0.5rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    display: flex;
+    font-size: 1rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+header ul li a:hover {
+    color: var(--accent);
+}
+
+header ul li.active {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+button {
+    display: flex;
+    gap: 10px;
+    background: none;
+    color: #ddd;
+    border: 1px solid #d1eaff30;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-items: center;
+}
+
+button.filled {
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-bg);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+button.filled:disabled {
+    background-color: var(--btn-disabled-bg);
+    border: 1px solid var(--btn-disabled-bg);
+}
+button.filled:hover:not(:disabled) {
+    background-color: var(--btn-hover-bg);
+}
+  
+button:hover {
+    background-color: var(--highlight-bg);
+}
+  
+button:disabled {
+    /* background-color: #333; */
+    color: gray;
+    cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(34,23,17,1) 0%, rgba(24,15,10,1) 100%);
+
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5a5a5a; 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #858585; 
+}
+
+span {
+    white-space: pre-line;
+}
+
+/* General styles */
+.mainContent {
+    margin-top: 6em;
+}
+    
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+    
+/* Story Box */
+.story-box {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 300px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+}
+
+/* Story Text */
+.story-box p {
+    white-space: pre-wrap;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Loading Indicator */
+.loading {
+    font-style: italic;
+    color: #888;
+}
+
+.latestEntry {
+    background-color: #dddddd30;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.buttonGroup {
+    display: flex;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+.suggestedButtons {
+    margin-top: 0;
+}
+
+.suggestedButtons svg {
+    color: var(--accent);
+}
+
+.suggestedButtons button {
+    padding: 0em 1em;
+    height: 2.5em;
+    border-radius: 20px;
+    border: none;
+    background: var(--highlight-bg);
+    font-size: 0.9rem;
+}
+
+.textArea {
+    background-color: var(--highlight-bg);
+    color: #ddd;
+    border: 1px solid #d1eaff30;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    resize: none;
+    field-sizing: content;
+}
+
+.imageContainer img {
+    border-radius: 10px;
+    max-height: 20em;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.activeButton {
+    background-color: var(--highlight-bg);
+    color: white;
+}
+
+.userAction {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    color: #818181;
+    padding: 0.5em 0 0.5em 1em;
+    border-left: 2px solid var(--accent);;
+    margin: 1em 0;
+}
+
+.userAction svg {
+    color: var(--accent);
+}
+
+.loadingText {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.specialButton {
+    background-color: var(--highlight-bg);
+}
+
+.settingsButton {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--highlight-bg);
+    border: none;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 0.5em;
+}
+
+.settings {
+    height: calc(100vh - 10px - 2em);
+    position: fixed;
+    width: 20vw;
+    top: 5px;
+    right: calc(-20vw - 2em - 5px);
+    z-index: 1001;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    padding: 1em;
+    border: 1px solid #d1eaff30;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: right 0.5s ease;
+    overflow-y: scroll;
+}
+
+.settings.open {
+    right: 5px;
+}
+
+.settingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingsHeader button {
+    padding: 1em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.settings h3 {
+    margin: 0;
+}
+
+.settings label,
+.introSettings label {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-bg);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.settings input[type="text"],
+.introSettings input[type="text"] {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 2em 1em;
+    border-radius: 0 0 1em 1em;
+    margin: 1em -16px -16px -16px;
+}
+
+.settings textarea,
+.introSettings textarea {
+    field-sizing: content;
+    margin: 1em -16px -16px -16px;
+    resize: none;
+    border-radius: 0 0 1em 1em;
+    border: none;
+    padding: 2em 1em;
+    background-color: var(--input-bg);
+    color: white;
+    line-height: 1.5em;
+}
+
+.settings select {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 2em 1em;
+    border-radius: 0 0 1em 1em;
+    margin: 1em -16px -16px -16px;
+}
+
+.settings .sliderSetting {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 2em 1em;
+    border-radius: 0 0 1em 1em;
+    margin: 1em -16px -16px -16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.sliderSetting input[type="range"] {
+    width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sliderSetting input[type="number"] {
+    text-align: center;
+    -moz-appearance: textfield;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0.25rem;
+    background-color: var(--container-bg);
+    color: white;
+}
+
+.settings textarea:focus,
+.settings input[type="text"]:focus,
+.settings select:focus,
+.introSettings textarea:focus,
+.introSettings input[type="text"]:focus {
+    outline: none;
+}
+
+.introSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.enhanceButton {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    border-radius: 50px;
+    width: 1em;
+    top: 8px;
+    justify-content: center;
+    border: none;
+}
+
+input[type="range" i] {
+    --c: var(--accent);
+    /* active color */
+    --g: 4px;
+    /* the gap */
+    --l: 4px;
+    /* line thickness*/
+    --s: 1rem;
+    /* thumb size*/
+    width: 400px;
+    height: var(--s);
+    /* needed for Firefox*/
+    --_c: color-mix(in srgb, var(--c), #000 var(--p, 0%));
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+    
+input[type="range" i]:focus-visible,
+input[type="range" i]:hover {
+    --p: 25%;
+}
+    
+input[type="range" i]:active,
+input[type="range" i]:focus-visible {
+    --_b: var(--s)
+}
+    
+/* chromium */
+input[type="range" i]::-webkit-slider-thumb {
+    height: var(--s);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 0 var(--_b, var(--l)) inset var(--_c);
+    border-image: linear-gradient(90deg, var(--_c) 50%, black 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+    -webkit-appearance: none;
+    appearance: none;
+    transition: .3s;
+}
+    
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+    height: var(--s);
+    width: var(--s);
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 var(--_b, var(--l)) inset var(--_c);
+    border-image: linear-gradient(90deg, var(--_c) 50%, black 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+    -moz-appearance: none;
+    appearance: none;
+    transition: .3s;
+}
+    
+@supports not (color: color-mix(in srgb, red, red)) {
+    input {
+        --_c: var(--c);
+    }
+}

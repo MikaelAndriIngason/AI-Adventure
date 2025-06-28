@@ -1,0 +1,60 @@
+[
+    {
+        "id": "1",
+        "title": "The Lost Treasure of Eldoria",
+        "description": "Embark on a quest to find the legendary treasure hidden deep within the enchanted forest of Eldoria. Face mythical creatures and solve ancient puzzles to uncover the secrets of the past.",
+        "createdAt": "2023-10-01T12:00:00Z",
+        "updatedAt": "2023-10-01T12:00:00Z",
+        "author": "John Doe",
+        "tags": ["adventure", "fantasy", "treasure hunt"],
+        "image": "https://picsum.photos/300/200?random=1",
+
+        "intro": "You find yourself at the edge of the enchanted forest of Eldoria, where legends speak of a hidden treasure guarded by mythical creatures. Armed with only your wits and a map, you step into the unknown.",
+        "essentials": "You have a map, a compass, and a small dagger. The forest is dense and filled with strange sounds. You must choose your path wisely to avoid dangers and uncover the treasure.",
+
+        "likes": 25,
+        "plays": 100
+    },
+    {
+        "id": "2",
+        "title": "Mystery of the Haunted Manor",
+        "description": "Explore the eerie halls of the abandoned manor rumored to be haunted. Unravel the mystery behind its dark past and confront the spirits that linger within.",
+        "createdAt": "2023-10-02T12:00:00Z",
+        "updatedAt": "2023-10-02T12:00:00Z",
+        "author": "Jane Smith",
+        "tags": ["mystery", "horror", "exploration"],
+        "image": "https://picsum.photos/300/200?random=2",
+        "intro": "The old manor stands before you, its windows shattered and doors creaking in the wind. Locals say it is haunted by the spirits of its former residents. You feel a chill run down your spine as you step inside.",
+        "essentials": "You carry a flashlight, a notebook, and a camera. The air is thick with dust and the scent of decay. You must document your findings while being cautious of the supernatural forces at play.",
+        "likes": 250,
+        "plays": 1000
+    },
+    {
+        "id": "3",
+        "title": "Escape from the Ancient Temple",
+        "description": "Navigate through a labyrinthine temple filled with traps and puzzles. Can you escape before the temple collapses?",
+        "createdAt": "2023-10-03T12:00:00Z",
+        "updatedAt": "2023-10-03T12:00:00Z",
+        "author": "Alice Johnson",
+        "tags": ["action", "adventure", "puzzle"],
+        "image": "https://picsum.photos/300/200?random=3",
+        "intro": "You awaken in a dark chamber of an ancient temple, with only a torch to light your way. The walls are covered in strange symbols, and you can hear the distant sound of water dripping.",
+        "essentials": "You have a torch, a rope, and a small dagger. The temple is filled with traps and hidden passages. You must use your wits to navigate safely and find the exit before time runs out.",
+        "likes": 150,
+        "plays": 800
+    },
+    {
+        "id": "4",
+        "title": "Journey to the Crystal Caverns",
+        "description": "Venture into the mystical crystal caverns where light and shadow dance. Discover the secrets hidden within the shimmering walls.",
+        "createdAt": "2023-10-04T12:00:00Z",
+        "updatedAt": "2023-10-04T12:00:00Z",
+        "author": "Bob Brown",
+        "tags": ["fantasy", "exploration", "mystical"],
+        "image": "https://picsum.photos/300/200?random=4",
+        "intro": "The entrance to the crystal caverns glows faintly, beckoning you to explore its depths. The air is cool and filled with a faint hum, as if the crystals themselves are alive.",
+        "essentials": "You carry a lantern, a map of the caverns, and a small pouch of crystals. The caverns are filled with strange creatures and hidden dangers. You must tread carefully to uncover their secrets.",
+        "likes": 300,
+        "plays": 1500
+    }
+]

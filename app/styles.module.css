@@ -1,0 +1,297 @@
+/* General styles */
+
+.mainContent {
+    margin-top: 6em;
+}
+  
+/* Container */
+.container {
+    max-width: 1176px;
+    margin: auto;
+    padding: 2rem;
+}
+  
+/* Story Box */
+.story-box {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 300px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+}
+  
+/* Story Text */
+.story-box p {
+    white-space: pre-wrap;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+  
+/* Loading Indicator */
+.loading {
+    font-style: italic;
+    color: #888;
+}
+
+.latestEntry {
+    background-color: #dddddd30;
+    border-radius: 5px;
+}
+  
+/* Buttons */
+.buttonGroup {
+    display: flex;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+.suggestedButtons {
+    margin-top: 0;
+}
+
+.suggestedButtons button {
+    padding: 0em 1em;
+    height: 2.5em;
+    border-radius: 20px;
+    border: none;
+    color: #44444488;
+}
+  
+.textArea {
+    background-color: #2d231e;
+    color: #ddd;
+    border: 1px solid #d1eaff30;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    resize: none;
+    field-sizing: content;
+}
+
+.imageContainer img {
+    border-radius: 10px;
+    max-height: 20em;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.activeButton {
+    background-color: #44444488;
+    color: white;
+}
+
+.userAction {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    color: #818181;
+    padding: 0.5em 0 0.5em 1em;
+    border-left: 2px solid #818181;
+    margin: 1em 0;
+}
+
+.specialButton {
+    background-color: #44444488;
+}
+
+.settings {
+    height: calc(100vh - 10px - 2em);
+    position: fixed;
+    width: 20vw;
+    top: 5px;
+    right: calc(-20vw - 2em - 5px);
+    z-index: 1001;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    padding: 1em;
+    border: 1px solid #d1eaff30;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: right 0.5s ease;
+}
+
+.settings.open {
+    right: 5px;
+}
+
+.settingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingsHeader button {
+    padding: 1em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.settings h3 {
+    margin: 0;
+}
+
+.settings label,
+.introSettings label {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-bg);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.settings input[type="text"],
+.introSettings input[type="text"] {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 2em 1em;
+    border-radius: 0 0 1em 1em;
+    margin: 1em -16px -16px -16px;
+}
+
+.settings textarea,
+.introSettings textarea {
+    field-sizing: content;
+    margin: 1em -16px -16px -16px;
+    resize: none;
+    border-radius: 0 0 1em 1em;
+    border: none;
+    padding: 2em 1em;
+    background-color: var(--input-bg);
+    color: white;
+    line-height: 1.5em;
+}
+
+.settings select {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 2em 1em;
+    border-radius: 0 0 1em 1em;
+    margin: 1em -16px -16px -16px;;
+}
+
+.settings textarea:focus,
+.settings input[type="text"]:focus,
+.settings select:focus,
+.introSettings textarea:focus,
+.introSettings input[type="text"]:focus {
+    outline: none;
+}
+
+.introSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.enhanceButton {
+    position: absolute;
+    right: 8px;
+    display: flex;
+    border-radius: 50px;
+    width: 1em;
+    top: 8px;
+    justify-content: center;
+    border: none;
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.adventureCard {
+    width: 250px;
+    background-color: var(--container-bg);
+    border-radius: 1em;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.adventureCard:hover {
+    transform: translateY(-5px);
+}
+
+.adventureCard h4 {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.adventureCard p {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #ccc;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.adventureCard img {
+    width: calc(100% + 2em);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+    margin: -1em;
+}
+
+.adventureCard svg {
+    color: var(--accent);
+}
+
+.adventureCard button {
+    background-color: var(--btn-bg);
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+}
+
+.adventureCard button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.adventureCard button svg {
+    color: white;
+}
+
+.adventureDetails {
+    display: flex;
+    gap: 1em;
+}
+
+.adventureStats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    align-items: center;
+    color: gray;
+}
+
+.adventureDetails button {
+    margin-left: auto;
+}
+
+.highlight {
+    color: var(--accent);
+}
