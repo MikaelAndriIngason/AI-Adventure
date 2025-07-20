@@ -1,9 +1,5 @@
 /* General styles */
 
-.mainContent {
-    margin-top: 6em;
-}
-  
 /* Container */
 .container {
     max-width: 1176px;
@@ -42,11 +38,6 @@
 }
   
 /* Buttons */
-.buttonGroup {
-    display: flex;
-    gap: 5px;
-    margin-top: 1rem;
-}
 
 .suggestedButtons {
     margin-top: 0;
@@ -211,13 +202,15 @@
 
 
 .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
 
 .adventureCard {
-    width: 250px;
+    /* width: 250px; */
     background-color: var(--container-bg);
     border-radius: 1em;
     padding: 1em;
@@ -294,4 +287,22 @@
 
 .highlight {
     color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cardContainer {
+        grid-template-columns: 1fr;
+    }
 }

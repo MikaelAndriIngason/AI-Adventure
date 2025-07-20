@@ -118,7 +118,7 @@ export default function IntroPage() {
                         if (checkInputValidity()) playAdventure();
                     }}
                     disabled={!checkInputValidity()}
-                    className="filled"
+                    className={`${merriweather.className} filled`}
                 >
                     Start Adventure <FontAwesomeIcon icon={faCaretRight} />
                 </button>

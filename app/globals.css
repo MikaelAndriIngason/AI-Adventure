@@ -204,6 +204,7 @@ span {
     display: flex;
     gap: 5px;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .suggestedButtons {
@@ -490,5 +491,32 @@ input[type="range"]::-moz-range-thumb {
 @supports not (color: color-mix(in srgb, red, red)) {
     input {
         --_c: var(--c);
+    }
+}
+
+@media (max-width: 750px) {
+    .mainContent {
+        margin-top: 3rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .mainHeader {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 1rem;
+    }
+
+    .mainHeader h3 {
+        margin: 1rem 0 0.5rem;
+    }
+
+    body {
+        padding-top: 6rem;
+    }
+
+    .mainContent {
+        margin: 0;
     }
 }
